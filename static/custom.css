@@ -1,0 +1,127 @@
+.logo-header {
+  float: left;
+  margin-right: 10px;
+  width: 36px;
+}
+
+.vimeo-embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.vimeo-embed-container iframe,
+.vimeo-embed-container object,
+.vimeo-embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header.masthead.masthead--view {
+  background-image: url('img/bg--view.jpg');
+}
+header.masthead.masthead--cows {
+  background-image: url('img/bg--cows.jpg');
+}
+header.masthead.masthead--darkened {
+  position: relative;
+}
+header.masthead.masthead--darkened::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .75;
+}
+header.masthead.masthead--cars-head {
+  background-image: url('img/bg--car-sporty.jpg');
+}
+header.masthead.masthead--cars-quotes {
+  background-image: url('img/bg--car-suv.jpg');
+}
+
+table.table--prices {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+table.table--prices tr {
+  text-align: left;
+}
+table.table--prices tr th:last-child,
+table.table--prices tr td:last-child {
+  text-align: right;
+}
+
+a.link--dark {
+  color: #111111!important;
+}
+
+.card .card__img-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* themes */
+.theme--main {
+  --theme-color: #96141a;/* this is red-ish */
+  --theme-color--darker: #801116;;
+}
+.theme--shop {
+  --theme-color: #538038;/* this is greed-ish */
+  --theme-color--darker: #395827;
+}
+
+
+.bg-primary {
+  background-color: var(--theme-color--darker)!important;
+}
+
+a {
+  color: var(--theme-color);
+}
+a:hover {
+  color: var(--theme-color--darker);
+}
+
+.text-primary {
+  color: var(--theme-color)!important;
+}
+
+.btn-primary {
+  background-color: var(--theme-color);
+  border-color: var(--theme-color);
+}
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: var(--theme-color--darker);
+  border-color: var(--theme-color--darker);
+}
+
+hr.divider {
+  border-color: var(--theme-color);
+}
+
+#mainNav.navbar-scrolled .navbar-brand:hover {
+  color: var(--theme-color);
+}
+#mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
+  color: var(--theme-color);
+}
+#mainNav .navbar-nav .nav-item .nav-link.active {
+    color: var(--theme-color)!important;
+}
+
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption {
+  background: var(--theme-color);/* TODO: find a nice hack for the opacity: 0.9; */
+}
+
+/* TODO: fix the colors inside the video (title and subtitle) -> in both, the car and the meat video */

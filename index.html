@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
+        <meta name="description" content="Auf der Alp Hürli im Schwarzsee wird erstklassiges Rindfleisch vom Schottischen Hochlandrind aus tierfreundlicher Freilandhaltung produziert." />
         <meta name="author" content="" />
-        <title>Creative - Start Bootstrap Theme</title>
+        <title>Paul Horner - 🐮 Erstklassiges Rindfleisch vom Schottischen Hochlandrind 🥩</title>
+
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="vendors/startbootstrap/assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -13,185 +14,330 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- Third party plugin CSS-->
+
+        <!-- CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="vendors/startbootstrap/css/styles.css" rel="stylesheet" />
+        <link href="static/custom.css" rel="stylesheet" />
+
+        <!-- GA -->
+        <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-50156206-2', 'paulhorner.ch');
+			ga('send', 'pageview');
+        </script>
+
+        <!--<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>-->
+        <!--<script type="text/javascript">-->
+        <!--(function(){-->
+        <!--emailjs.init("user_Y25UQeF54sljyFNogpYQn");-->
+        <!--})();-->
+        <!--</script>-->
     </head>
-    <body id="page-top">
+    <body id="page-top" class="theme--shop">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <!-- TODO: maybe clicking on the logo should lead to home? and only on home it should scroll up? -->
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                    <img class="logo-header" src="static/img/logo.png" alt="Logo Paul Horner - Handel und Dienstleistungen">
+                    Paul Horner
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Navigation anzeigen">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#about">Alp Hürli</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#meat">Das Hochlandrind</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#services">Unser Angebot</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#portfolio">Bildergalerie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#prices">Preise</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#contact">Kontakt</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
         <!-- Masthead-->
-        <header class="masthead">
+        <header class="masthead masthead--view">
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-10 align-self-end">
-                        <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of Free Bootstrap Themes</h1>
-                        <hr class="divider my-4" />
+                        <h1 class="text-uppercase text-white font-weight-bold">Erstklassiges Rindfleisch aus tierfreundlicher Freilandhaltung</h1>
+                        <hr class="divider my-4">
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+                        <p class="text-white-75 font-weight-light mb-5">
+                            Das geschmackvolle und gesunde Fleisch der Schottischen Hochlandrinder verfügt über einen Fettgehalt von 4.5 %, also weniger als ein Drittel von herkömmlichem Rindfleisch, beinhaltet aber bedeutend mehr Protein. Das Fleisch der Schottischen Hochlandrinder eignet sich für alle herkömmlichen Zubereitungsarten.
+                        </p>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#prices">Zum Angebot</a>
                     </div>
                 </div>
             </div>
         </header>
+
         <!-- About-->
         <section class="page-section bg-primary" id="about">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
-                        <hr class="divider light my-4" />
-                        <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+                        <h2 class="text-white mt-0">Herzlich willkommen im Horners Hürli!</h2>
+                        <hr class="divider light my-4">
+                        <p class="text-white-75 mb-4">
+                            <a class="link--dark" href="https://www.google.ch/maps?f=q&source=s_q&hl=en&geocode&abauth=53568c857YSZUzBnqkw3OLkwfxSvIDoXx5s&authuser=0&q=horners+h%C3%BCrli,+fribourg&aq&vps=2&jsv=480a&sll=46.668699,7.299514&sspn=0.018759,0.039825&vpsrc=6&num=10">Horners Hürli</a>
+                            ist eine kleine Voralpenweide im Schwarzseetal. Es liegt zwischen 1200 und 1600 M ü M., ist zu Fuss in ca. 20 Minuten erreichbar und bietet eine fantastische Aussicht über das Schwarzseetal und das gesamte Mittelland.
+                            Wir freuen uns über Ihren Besuch auf
+                            <a class="link--dark" href="https://www.google.ch/maps?f=q&source=s_q&hl=en&geocode&abauth=53568c857YSZUzBnqkw3OLkwfxSvIDoXx5s&authuser=0&q=horners+h%C3%BCrli,+fribourg&aq&vps=2&jsv=480a&sll=46.668699,7.299514&sspn=0.018759,0.039825&vpsrc=6&num=10">unserer Alp</a>!
+                        </p>
+                        <div class='vimeo-embed-container'><iframe src='https://player.vimeo.com/video/197013849' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#meat">Über das Hochlandrind</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Meat-->
+        <!-- TODO: this should probably be a section, not a header -->
+        <header class="masthead masthead--cows" id="meat">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <h1 class="text-uppercase text-white font-weight-bold">Das Hochlandrind</h1>
+                        <hr class="divider my-4">
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 font-weight-light mb-5">
+                            Wir züchten seit dem Jahr 2004 auf unserer Alp in den Freiburger Voralpen Schottische Hochlandrinder. Wie es der Name der Rinder bereits vermuten lässt, stammen sie ursprünglich aus dem Norden Schottlands und den vorgelagerten Inseln. Seit über 150 Jahren besteht die Rasse in unveränderter Form und weisst keinerlei Einkreuzungen vor. Heute ist das Schottische Hochlandrind auf der ganzen Welt verbreitet. Es zeichnet sich durch sein hohes Mass an Robustheit und die optimale Eignung für die extensive Nutzung von Weideland jeder Art.
+                        </p>
+                        <p class="text-white-75 font-weight-light mb-5">
+                            Mit seinem zotteligen Fell und den ausladenden Hörnern hinterlässt es einen urchigen Eindruck. Im Wesen ist es neugierig, zutraulich und ruhig. Viele unserer Tiere sind sehr zutraulich und handzahm.
+                            Unsere Herde wird grösstenteils im Freien gehalten, die Fütterung basiert ausschliesslich auf Gras.
+                            Die Fortpflanzung findet ausnahmslos durch Natursprung statt. Der Zeitpunkt wird dabei so gewählt, dass die Kälber das Licht der Welt auf unserer Alp erblicken und somit vom ersten Tag an in die Herde integriert werden können.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
-                <h2 class="text-center mt-0">At Your Service</h2>
-                <hr class="divider my-4" />
+                <h2 class="text-center mt-0">Was wir Ihnen bieten</h2>
+                <hr class="divider my-4">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-                            <h3 class="h4 mb-2">Sturdy Themes</h3>
-                            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                            <i class="fas fa-4x fa-leaf text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Gesund &amp; Fair</h3>
+                            <p class="text-muted mb-0">Wir produzieren erstklassiges Rindfleisch mit extrem niedrigem Fettgehalt in Freilandhaltung.</p>
+                            <hr class="divider my-4">
+                            <a class="btn btn-primary js-scroll-trigger" href="#prices">Zur Preisliste</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-                            <h3 class="h4 mb-2">Up to Date</h3>
-                            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-                            <h3 class="h4 mb-2">Ready to Publish</h3>
-                            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                            <i class="fas fa-4x fa-glass-cheers text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Für Ihren Event</h3>
+                            <p class="text-muted mb-0">Gerne organisiern wir für Sie Ihren Firmen- oder Privatevent inkl. Essen und Getränke.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
                             <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-                            <h3 class="h4 mb-2">Made with Love</h3>
-                            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                            <h3 class="h4 mb-2">Mit Herzblut dabei</h3>
+                            <p class="text-muted mb-0">Mit Herz und Seele führen wir die Alp Hürli – und kennen jedes unserer Rinder mit Namen.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-home text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Tradition</h3>
+                            <p class="text-muted mb-0">Die Alphütte Hürli ist über 200 Jahre alt und befindet sich seit mehreren Generationen in Familienbesitz.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Portfolio-->
-        <div id="portfolio">
+        <section id="portfolio">
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="vendors/startbootstrap/assets/img/portfolio/fullsize/1.jpg"
-                            ><img class="img-fluid" src="vendors/startbootstrap/assets/img/portfolio/thumbnails/1.jpg" alt="" />
+                        <a class="portfolio-box" href="static/img/portfolio/thumbnails/1.jpg">
+                            <img class="img-fluid" src="static/img/portfolio/thumbnails/1.jpg" alt="Hoch über dem Schwarzsee">
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div></a
-                        >
+                                <!-- <div class="project-category text-white-50">
+                                  Category
+                                </div> -->
+                                <div class="project-name">
+                                    Hoch über dem Schwarzsee
+                                </div>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="vendors/startbootstrap/assets/img/portfolio/fullsize/2.jpg"
-                            ><img class="img-fluid" src="vendors/startbootstrap/assets/img/portfolio/thumbnails/2.jpg" alt="" />
+                        <a class="portfolio-box" href="static/img/portfolio/thumbnails/2.jpg">
+                            <img class="img-fluid" src="static/img/portfolio/thumbnails/2.jpg" alt="Schottisches Hochlandrind">
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div></a
-                        >
+                                <!-- <div class="project-category text-white-50">
+                                  Category
+                                </div> -->
+                                <div class="project-name">
+                                    Schottisches Hochlandrind
+                                </div>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="vendors/startbootstrap/assets/img/portfolio/fullsize/3.jpg"
-                            ><img class="img-fluid" src="vendors/startbootstrap/assets/img/portfolio/thumbnails/3.jpg" alt="" />
+                        <a class="portfolio-box" href="static/img/portfolio/thumbnails/3.jpg">
+                            <img class="img-fluid" src="static/img/portfolio/thumbnails/3.jpg" alt="Die Herde im Sprint">
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div></a
-                        >
+                                <!-- <div class="project-category text-white-50">
+                                  Category
+                                </div> -->
+                                <div class="project-name">
+                                    Die Herde im Sprint
+                                </div>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="vendors/startbootstrap/assets/img/portfolio/fullsize/4.jpg"
-                            ><img class="img-fluid" src="vendors/startbootstrap/assets/img/portfolio/thumbnails/4.jpg" alt="" />
+                        <a class="portfolio-box" href="static/img/portfolio/thumbnails/4.jpg">
+                            <img class="img-fluid" src="static/img/portfolio/thumbnails/4.jpg" alt="Alp Hürli: 1250m über Meer">
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div></a
-                        >
+                                <div class="project-category text-white-50">
+                                    Alp Hürli
+                                </div>
+                                <div class="project-name">
+                                    1250m über Meer
+                                </div>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="vendors/startbootstrap/assets/img/portfolio/fullsize/5.jpg"
-                            ><img class="img-fluid" src="vendors/startbootstrap/assets/img/portfolio/thumbnails/5.jpg" alt="" />
+                        <a class="portfolio-box" href="static/img/portfolio/thumbnails/5.jpg">
+                            <img class="img-fluid" src="static/img/portfolio/thumbnails/5.jpg" alt="Weide mit Aussicht">
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div></a
-                        >
+                                <!-- <div class="project-category text-white-50">
+                                  Category
+                                </div> -->
+                                <div class="project-name">
+                                    Weide mit Aussicht
+                                </div>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="vendors/startbootstrap/assets/img/portfolio/fullsize/6.jpg"
-                            ><img class="img-fluid" src="vendors/startbootstrap/assets/img/portfolio/thumbnails/6.jpg" alt="" />
+                        <a class="portfolio-box" href="static/img/portfolio/thumbnails/6.jpg">
+                            <img class="img-fluid" src="static/img/portfolio/thumbnails/6.jpg" alt="Am Fuss der Kaiseregg">
                             <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div></a
-                        >
+                                <!-- <div class="project-category text-white-50">
+                                  Category
+                                </div> -->
+                                <div class="project-name">
+                                    Am Fuss der Kaiseregg
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Call to action-->
-        <section class="page-section bg-dark text-white">
-            <div class="container text-center">
-                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
-            </div>
         </section>
-        <!-- Contact-->
+
+        <!-- Prices -->
+        <!-- TODO: fix this -->
+<!--        {% if shop_items_list %}-->
+<!--        <section id="prices" class="page-section bg-dark text-white font-weight-light">-->
+<!--            <div class="container text-center">-->
+<!--                <h2 class="mb-4">Preisliste</h2>-->
+<!--                <hr class="divider my-4">-->
+<!--                <table class="table table-dark table&#45;&#45;prices">-->
+<!--                    <thead>-->
+<!--                    <tr>-->
+<!--                        <th>Bezeichnung</th>-->
+<!--                        <th>Kilopreis</th>-->
+<!--                        <th>Abpack-Einheit (ungefähr)</th>-->
+<!--                    </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody>-->
+<!--                    {% for shop_item in shop_items_list %}-->
+<!--                    <tr>-->
+<!--                        <td>{{ shop_item.title }}</td>-->
+<!--                        <td>CHF {{ shop_item.price }}.-</td>-->
+<!--                        <td>{{ shop_item.avg_weight }} gr{% if shop_item.sold_out %} (<i>Zurzeit ausverkauft</i>){% endif %}</td>-->
+<!--                    </tr>-->
+<!--                    {% endfor %}-->
+<!--                    </tbody>-->
+<!--                </table>-->
+<!--                <p class="text-white-90 mb-4">-->
+<!--                    Das Fleisch wird frisch vakuumiert oder tiefgefroren, in Portionen abgepackt und etikettiert geliefert. Bitte kontaktieren Sie uns, sollten Sie andere Abpackeinheiten wünschen.-->
+<!--                    Wir schlachten ca. 4x jährlich, deshalb ist es möglich, dass nicht jederzeit das gesamte Sortiment verfügbar ist. Bei grossem oder regelmässigem Bedarf kann nach Absprache die Lieferkapazität erhöht werden.-->
+<!--                </p>-->
+<!--                <a href="mailto:horner@paulhorner.ch?subject=Bestellung Rindfleisch&body=Guten Tag, ich möchte gerne folgende Bestellung aufgeben:" class="btn btn-primary btn-xl">Jetzt Bestellen!</a>-->
+<!--            </div>-->
+<!--        </section>-->
+<!--        {% endif %}-->
+
+        <!-- Contact -->
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="mt-0">Let's Get In Touch!</h2>
-                        <hr class="divider my-4" />
-                        <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                        <h2 class="mt-0">Kontaktieren Sie uns!</h2>
+                        <hr class="divider my-4">
+                        <p class="text-muted mb-5">
+                            Sie möchten erstklassiges Rindfleisch vom Schottischen Hochlandrind bestellen? Gerne erwarten wir Ihre Nachricht!
+                        </p>
+                        <p class="text-muted mb-5">
+                            Sie möchten einen Privat- oder Firmenevent auf der Alp Hürli organisieren? Lassen Sie uns das gemeinsam anpacken!
+                        </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                        <div>+1 (555) 123-4567</div>
+                        <div>
+                            <a href="tel:+41794234676">+4179 423 46 76</a>
+                        </div>
                     </div>
                     <div class="col-lg-4 mr-auto text-center">
-                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i
-                        ><!-- Make sure to change the email address in BOTH the anchor text and the link target below!--><a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                        <a class="d-block" href="mailto:horner@paulhorner.ch">horner@paulhorner.ch</a>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div></div>
+            <div class="container">
+                <div class="small text-center text-muted">
+                    <hr class="divider my-4">
+                    <p>
+                        Wir sind Mitglied der <a href="http://highlandcattle.ch/">Highland Cattle Society (Switzerland)</a>.
+                    </p>
+                </div>
+            </div>
         </footer>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
@@ -200,5 +346,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <!-- Core theme JS-->
         <script src="vendors/startbootstrap/js/scripts.js"></script>
+
+        <!-- Firebase stuff -->
+        <script src="/__/firebase/7.15.0/firebase-app.js"></script>
+        <script src="/__/firebase/init.js"></script>
     </body>
 </html>
