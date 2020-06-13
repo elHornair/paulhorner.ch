@@ -152,7 +152,22 @@ hr.divider {
 }
 
 #portfolio .container-fluid .portfolio-box .portfolio-box-caption {
-  background: var(--theme-color);/* TODO: find a nice hack for the opacity: 0.9; */
+  background: transparent;
+}
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--theme-color);
+  opacity: 0.9;
+  z-index: 1;
+}
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption > * {
+  z-index: 2;
 }
 
 /* TODO: fix the colors inside the video (title and subtitle) -> in both, the car and the meat video */
