@@ -265,38 +265,29 @@
         </section>
 
         <!-- Prices -->
-        <!-- TODO: fix this -->
-<!--        {% if shop_items_list %}-->
-<!--        <section id="prices" class="page-section bg-dark text-white font-weight-light">-->
-<!--            <div class="container text-center">-->
-<!--                <h2 class="mb-4">Preisliste</h2>-->
-<!--                <hr class="divider my-4">-->
-<!--                <table class="table table-dark table&#45;&#45;prices">-->
-<!--                    <thead>-->
-<!--                    <tr>-->
-<!--                        <th>Bezeichnung</th>-->
-<!--                        <th>Kilopreis</th>-->
-<!--                        <th>Abpack-Einheit (ungefähr)</th>-->
-<!--                    </tr>-->
-<!--                    </thead>-->
-<!--                    <tbody>-->
-<!--                    {% for shop_item in shop_items_list %}-->
-<!--                    <tr>-->
-<!--                        <td>{{ shop_item.title }}</td>-->
-<!--                        <td>CHF {{ shop_item.price }}.-</td>-->
-<!--                        <td>{{ shop_item.avg_weight }} gr{% if shop_item.sold_out %} (<i>Zurzeit ausverkauft</i>){% endif %}</td>-->
-<!--                    </tr>-->
-<!--                    {% endfor %}-->
-<!--                    </tbody>-->
-<!--                </table>-->
-<!--                <p class="text-white-90 mb-4">-->
-<!--                    Das Fleisch wird frisch vakuumiert oder tiefgefroren, in Portionen abgepackt und etikettiert geliefert. Bitte kontaktieren Sie uns, sollten Sie andere Abpackeinheiten wünschen.-->
-<!--                    Wir schlachten ca. 4x jährlich, deshalb ist es möglich, dass nicht jederzeit das gesamte Sortiment verfügbar ist. Bei grossem oder regelmässigem Bedarf kann nach Absprache die Lieferkapazität erhöht werden.-->
-<!--                </p>-->
-<!--                <a href="mailto:horner@paulhorner.ch?subject=Bestellung Rindfleisch&body=Guten Tag, ich möchte gerne folgende Bestellung aufgeben:" class="btn btn-primary btn-xl">Jetzt Bestellen!</a>-->
-<!--            </div>-->
-<!--        </section>-->
-<!--        {% endif %}-->
+        <section id="prices" class="page-section bg-dark text-white font-weight-light">
+            <div class="container text-center">
+                <h2 class="mb-4">Preisliste</h2>
+                <hr class="divider my-4">
+                <table class="table table-dark table--prices">
+                    <thead>
+                        <tr>
+                            <th>Bezeichnung</th>
+                            <th>Kilopreis</th>
+                            <th>Abpack-Einheit (ungefähr)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- This will be filled by JS -->
+                    </tbody>
+                </table>
+                <p class="text-white-90 mb-4">
+                    Das Fleisch wird frisch vakuumiert oder tiefgefroren, in Portionen abgepackt und etikettiert geliefert. Bitte kontaktieren Sie uns, sollten Sie andere Abpackeinheiten wünschen.
+                    Wir schlachten ca. 4x jährlich, deshalb ist es möglich, dass nicht jederzeit das gesamte Sortiment verfügbar ist. Bei grossem oder regelmässigem Bedarf kann nach Absprache die Lieferkapazität erhöht werden.
+                </p>
+                <a href="mailto:horner@paulhorner.ch?subject=Bestellung Rindfleisch&body=Guten Tag, ich möchte gerne folgende Bestellung aufgeben:" class="btn btn-primary btn-xl">Jetzt Bestellen!</a>
+            </div>
+        </section>
 
         <!-- Contact -->
         <section class="page-section" id="contact">
@@ -352,7 +343,38 @@
         <script src="static/vendors/startbootstrap/js/scripts.js"></script>
 
         <!-- Firebase stuff -->
-        <script src="/__/firebase/7.15.0/firebase-app.js"></script>
-        <script src="/__/firebase/init.js"></script>
+        <script defer src="/__/firebase/7.15.0/firebase-app.js"></script>
+        <script defer src="/__/firebase/7.15.0/firebase-firestore.js"></script>
+        <script defer src="/__/firebase/init.js"></script>
+
+        <!-- Initialise dynamic content -->
+        <script>
+			document.addEventListener('DOMContentLoaded', function() {
+				let db = firebase.firestore();
+
+				db.collection('shop_items').get().then((querySnapshot) => {
+					let itemsString = querySnapshot.docs
+                        .map((doc) => {
+                            return doc.data();
+                        })
+                        .map((shopItem) => {
+                            return `
+                                <tr>
+                                    <td>${shopItem.title}</td>
+                                    <td>${shopItem.price}.-</td>
+                                    <td>${shopItem.avg_weight} gr ${shopItem.sold_out ? ' (<i>Zurzeit ausverkauft</i>)' : ''}</td>
+                                </tr>
+                            `;
+                        })
+                        .join('')
+                    ;
+
+					document.querySelector('#prices table > tbody')
+                        .insertAdjacentHTML('beforeend', itemsString)
+                    ;
+				});
+
+			});
+        </script>
     </body>
 </html>
