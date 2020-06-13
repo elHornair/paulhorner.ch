@@ -111,7 +111,6 @@ a.link--dark {
   --theme-color--darker: #395827;
 }
 
-
 .bg-primary {
   background-color: var(--theme-color--darker)!important;
 }
@@ -132,9 +131,13 @@ a:hover {
   border-color: var(--theme-color);
 }
 .btn-primary:hover,
-.btn-primary:active {
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):active:focus {
   background-color: var(--theme-color--darker);
   border-color: var(--theme-color--darker);
+  box-shadow: none;
 }
 
 hr.divider {
