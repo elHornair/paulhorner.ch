@@ -1,66 +1,341 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Handel und Dienstleistungen in der Autobranche inklusive Import und Export, Vermittlung von Occasionen und Neuwägen, Bedarfsabklärung, Fuhrparkmanagement." />
+        <meta name="author" content="" />
+        <title>Paul Horner - 🚘 Traumauto finden, Risiken minimieren, bequem nach Hause liefern lassen 🚘</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.15.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.15.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.15.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.15.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.15.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="static/img/favicon.ico" />
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; margin-bottom: 10px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a href="autohandel.html">Autohandel</a>
-      <a href="fleischhandel.html">Fleischhandel</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+        <!-- CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <link href="static/vendors/startbootstrap/css/styles.css" rel="stylesheet" />
+        <link href="static/custom.css" rel="stylesheet" />
+
+        <!-- GA -->
+        <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-50156206-2', 'paulhorner.ch');
+			ga('send', 'pageview');
+        </script>
+
+        <!--<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>-->
+        <!--<script type="text/javascript">-->
+        <!--(function(){-->
+        <!--emailjs.init("user_Y25UQeF54sljyFNogpYQn");-->
+        <!--})();-->
+        <!--</script>-->
+    </head>
+    <body id="page-top" class="theme--main">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <!-- TODO: maybe clicking on the logo should lead to home? and only on home it should scroll up? -->
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                    <img class="logo-header" src="static/img/logo.png" alt="Logo Paul Horner - Handel und Dienstleistungen">
+                    Paul Horner
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Navigation anzeigen">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#services">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#cars">Aktuelle Angebote</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#contact">Kontakt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#highlandbeef">Highland-Beef</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Masthead -->
+        <header class="masthead masthead--cars-head masthead--darkened">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <h1 class="text-uppercase text-white font-weight-bold">Ihr Traumauto gibt's schon</h1>
+                        <h2 class="text-white font-weight-bold">Wir müssen es nur noch zusammen finden!</h2>
+                        <hr class="divider my-4">
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 font-weight-light mb-5">
+                            Das Angebot auf dem Schweizer Automarkt ist enorm gross.
+                            Auf den gängigen Internet-Plattformen finden Sie über 200'000 Fahrzeuge.
+                            Um in diesem Dschungel Ihr Wunschauto zu finden, müssen Sie Stunden, wenn nicht Tage investieren.
+                            Nutzen Sie meinen Service, anstatt selber zu suchen! Von der Abklärung bis zur Auslieferung bei Ihnen zu Hause.
+                            So sparen Sie nicht nur Geld, sondern auch noch viel Zeit.
+                            Zusammen finden wir Ihr optimales Auto.
+                        </p>
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Zum Video</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- About -->
+        <section class="page-section bg-primary" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Freut mich, Sie kennen zu lernen!</h2>
+                        <hr class="divider light my-4">
+                        <p class="text-white-75 mb-5">
+                            Mein Name ist Paul Horner. Ich habe mein Leben lang in der Automobilbranche gearbeitet - Vom Automechaniker bis ins Direktorium von namhaften Schweizer Autohäusern.
+                            Seit zehn Jahren biete ich meine Dienste selbständig an.
+                            Ich verfüge sowohl national, als auch international über erstklassige Kontakte.
+                            Profitieren auch Sie davon!
+                        </p>
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Mein Service für Sie</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="page-section" id="services">
+            <div class="container">
+                <h2 class="text-center mt-0">Mein Service für Sie</h2>
+                <hr class="divider my-4">
+                <div class='vimeo-embed-container'><iframe src='https://player.vimeo.com/video/243096853' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-tasks text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Abklärung</h3>
+                            <p class="text-muted mb-0">Cabrio oder Allrad? Etwas mehr Platz im Kofferraum? Ähnliches Fahrzeug zum günstigeren Preis? Ich berate Sie gerne.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-shipping-fast text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Beschaffung</h3>
+                            <p class="text-muted mb-0">Ich finde für Sie das Angebot mit dem besten Preis-Leistungsverhältnis aus der Schweiz oder Europa.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-file-alt text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Administration</h3>
+                            <p class="text-muted mb-0">Motorfahrzeugkontrolle? Einlösen des Fahrzeugs? Versicherungsnachweis? Ich erledige das für Sie.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-key text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Auslieferung</h3>
+                            <p class="text-muted mb-0">Ich liefere das Fahrzeug direkt zu Ihnen nach Hause. Sie müssen nur den Schlüssel drehn und losfahren!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center mt-5">
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#cars">Zu den aktuellen Angeboten</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cars -->
+        <!-- TODO: fix this -->
+<!--        {% if cars_list %}-->
+<!--        <section id="cars" class="page-section bg-dark">-->
+<!--            <div class="container text-center text-white">-->
+<!--                <h2 class="mb-4">Aktuelle Angebote</h2>-->
+<!--                <hr class="divider my-4">-->
+<!--                <p class="text-white-75 font-weight-light mb-5">-->
+<!--                    Momentan habe ich folgende gepflegten Fahrzeuge der Klein- und Mittelklasse an Lager.-->
+<!--                    Diese sind allesamt aus erster Hand, seriös gewartet, fachmännisch aufbereitet und zu fairen Preisen zu verkaufen.-->
+<!--                </p>-->
+<!--            </div>-->
+<!--            <div class="container mb-4">-->
+<!--                <div class="row">-->
+<!--                    {% for car in cars_list %}-->
+<!--                    <div class="col-lg-4 col-sm-6">-->
+<!--                        <div class="card mb-4">-->
+<!--                            {% if car.is_new %}-->
+<!--                            <h4 class="card__img-badge font-weight-light">-->
+<!--                                <span class="badge badge-warning">Neues Angebot</span>-->
+<!--                            </h4>-->
+<!--                            {% endif %}-->
+<!--                            {% if car.main_image_url %}-->
+<!--                            <img class="card-img-top" src="{{ car.main_image_url }}" alt="{{ car.title }}">-->
+<!--                            {% endif %}-->
+<!--                            <div class="card-body">-->
+<!--                                <h3 class="card-title">{{ car.title }}</h3>-->
+<!--                                <p class="card-text">{{ car.description }}</p>-->
+<!--                                <a href="#" class="btn btn-primary">TODO</a>-->
+<!--                                &lt;!&ndash; TODO: maybe render more information. at least the price (tags?) &ndash;&gt;-->
+<!--                                &lt;!&ndash; TODO: make sure the images are available in a bigger version &ndash;&gt;-->
+<!--                                &lt;!&ndash; TODO: give five stars to all of them? trololol &ndash;&gt;-->
+<!--                                &lt;!&ndash; TODO: make all the cards the same height? &ndash;&gt;-->
+<!--                                &lt;!&ndash; <span>{{ car.price }}</span>-->
+<!--                                <span>{{ car.km }}</span>-->
+<!--                                <span>{{ car.immatriculation_date }}</span>-->
+<!--                                <span>{{ picture_urls }}</span> &ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    {% endfor %}-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="container text-center">-->
+<!--                <p class="text-white-75 font-weight-light mb-5">-->
+<!--                    Ihr Traumfahrzeug befindet sich nicht unter den Angeboten?-->
+<!--                    Gerne kann ich auf Wunsch weitere Autos, Motorräder, Nutz- und Landwirtschaftsfahrzeuge aller Art vermitteln.-->
+<!--                </p>-->
+<!--                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#contact">Jetzt kontaktieren</a>-->
+<!--            </div>-->
+<!--        </section>-->
+<!--        {% endif %}-->
+
+        <!-- MoreServices -->
+        <section class="page-section" id="more-services">
+            <div class="container">
+                <h2 class="text-center mt-0">Weitere Dienstleistungen</h2>
+                <hr class="divider my-4">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-car text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Vermittlung</h3>
+                            <p class="text-muted mb-0">Sie brauchen ein neues oder gebrauchtes Fahrzeug? Ich finde für Sie das Angebot mit dem besten Preis-Leistungsverhältnis aus der Schweiz oder Europa. Die Auslieferung erfolgt schlüsselfertig vor Ort.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-tasks text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Bedarfsabklärung</h3>
+                            <p class="text-muted mb-0">Der Markt ändert sich rasant und bietet eine kaum überschaubare Vielfalt an Marken und Modellen. Ich erarbeite mit Ihnen eine Kriterienliste und finde für Sie die Angebote, die am besten zu Ihnen passen.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-balance-scale text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Fuhrparkmanagement für Firmen</h3>
+                            <p class="text-muted mb-0">Sie verfügen bereits über einen Fuhrpark und möchten Optimierungspotenziale erkennen und umsetzen? Ich analysiere Ihren Park und zeige Ihnen allfällige Optimierungspotenziale im Bereich Beschaffung, Unterhalt, Versicherung und Finanzierung auf.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-piggy-bank text-primary mb-4"></i>
+                            <h3 class="h4 mb-2">Finanzierung</h3>
+                            <p class="text-muted mb-0">Das Angebot an Finanzierungsdienstleistungen ist fast so breit wie das Fahrzeugangebot. Zusammen erarbeiten wir Ihr persönliches Finanzierungsmodell.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center mt-5">
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#contact">Individuelle Anfrage</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quotes -->
+        <header class="masthead masthead--cars-quotes masthead--darkened">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <h2 class="text-uppercase text-white font-weight-bold">Das sagen meine Kunden</h2>
+                        <hr class="divider my-4">
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 font-weight-light mb-5">
+                            TODO: add quotes
+                        </p>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#contact">Auch Kunde werden</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contact -->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">Kontaktieren Sie mich!</h2>
+                        <hr class="divider my-4">
+                        <p class="text-muted mb-5">
+                            Sie möchten Ihr Traumauto finden? Gerne erwarte ich Ihre Nachricht!
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                        <div>
+                            <a href="tel:+41794234676">+4179 423 46 76</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                        <a class="d-block" href="mailto:horner@paulhorner.ch">horner@paulhorner.ch</a>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 col-md-6 col-lg-4 text-center">
+                        <hr class="divider my-5">
+                        <p class="text-muted mt-5">
+                            Weitere Informationen über mich finden Sie auf <a target="_blank" href="https://www.autoscout24.ch/de/ip/paul-horner-8050-zuerich?accountid=67082">Autoscout24</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Masthead -->
+        <header class="masthead masthead--view" id="highlandbeef">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <h1 class="text-uppercase text-white font-weight-bold">Lust auf einen Snack?</h1>
+                        <hr class="divider my-4">
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 font-weight-light mb-5">
+                            Neben dem Autohandel züchte ich zusammen mit meiner Frau als Hobby seit fast 20 Jahren Schottische Hochlandrinder.
+                            Auf unserer Alp in den Freiburger Voralpen produzieren wir so erstklassiges Rindfleisch aus tierfreundlicher Freilandhaltung.
+                        </p>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="/erstklassigesrindfleisch.html">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+        <!-- Core theme JS-->
+        <script src="static/vendors/startbootstrap/js/scripts.js"></script>
+
+        <!-- Firebase stuff -->
+        <script src="/__/firebase/7.15.0/firebase-app.js"></script>
+        <script src="/__/firebase/init.js"></script>
+    </body>
 </html>
