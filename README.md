@@ -5,6 +5,7 @@
   bother to run it properly with NPM)
 
 ## Develop
+* Run the correct node version: `nvm use` (it will take the version from `.nvmrc`)
 * Make sure you're logged in: `firebase login` (use private google account)
 * Serve locally: `firebase serve`
 
