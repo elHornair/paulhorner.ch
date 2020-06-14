@@ -86,6 +86,36 @@ table.table--prices tr td:last-child {
 
 
 /*************************************
+***** Quotes
+*************************************/
+.quotes {
+  display: flex;
+  position: relative;
+  min-height: 100px;
+  padding: 0;
+  align-items: center;
+  list-style: none;
+}
+.quote {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 1.15rem;
+}
+.quote::before {
+  content: '„';
+  color: var(--theme-color);
+}
+.quote::after {
+  content: '“';
+  color: var(--theme-color);
+}
+.quote--active {
+  opacity: 1;
+}
+
+/*************************************
 ***** Misc
 *************************************/
 a.link--dark {
