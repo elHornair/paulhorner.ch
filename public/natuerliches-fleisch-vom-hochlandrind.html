@@ -341,39 +341,12 @@
         <!-- Core theme JS-->
         <script src="static/vendors/startbootstrap/js/scripts.js"></script>
 
+        <!-- Custom JS-->
+        <script src="static/main.js"></script>
+
         <!-- Firebase stuff -->
         <script defer src="/__/firebase/7.15.0/firebase-app.js"></script>
         <script defer src="/__/firebase/7.15.0/firebase-firestore.js"></script>
         <script defer src="/__/firebase/init.js"></script>
-
-        <!-- Initialise dynamic content -->
-        <script>
-			document.addEventListener('DOMContentLoaded', function() {
-				let db = firebase.firestore();
-
-				db.collection('shop_items').get().then((querySnapshot) => {
-					let itemsString = querySnapshot.docs
-                        .map((doc) => {
-                            return doc.data();
-                        })
-                        .map((shopItem) => {
-                            return `
-                                <tr>
-                                    <td>${shopItem.title}</td>
-                                    <td>${shopItem.price}.-</td>
-                                    <td>${shopItem.avg_weight} gr ${shopItem.sold_out ? ' (<i>Zurzeit ausverkauft</i>)' : ''}</td>
-                                </tr>
-                            `;
-                        })
-                        .join('')
-                    ;
-
-					document.querySelector('#prices table > tbody')
-                        .insertAdjacentHTML('beforeend', itemsString)
-                    ;
-				});
-
-			});
-        </script>
     </body>
 </html>

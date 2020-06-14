@@ -20,10 +20,46 @@
 
 		changeQuote();
 		window.setInterval(changeQuote, 3000);
-
 	}
 
-	initQuotes();
 
+	/*************************************
+	 ***** Shop
+	 *************************************/
+	function initShop () {
+		document.addEventListener('DOMContentLoaded', function() {
+			let db = firebase.firestore();
+
+			db.collection('shop_items').get().then((querySnapshot) => {
+				let itemsString = querySnapshot.docs
+					.map((doc) => {
+						return doc.data();
+					})
+					.map((shopItem) => {
+						return `
+                                <tr>
+                                    <td>${shopItem.title}</td>
+                                    <td>${shopItem.price}.-</td>
+                                    <td>${shopItem.avg_weight} gr ${shopItem.sold_out ? ' (<i>Zurzeit ausverkauft</i>)' : ''}</td>
+                                </tr>
+                            `;
+					})
+					.join('')
+				;
+
+				document.querySelector('#prices table > tbody')
+					.insertAdjacentHTML('beforeend', itemsString)
+				;
+			});
+		});
+	}
+
+	if (document.querySelector('.quotes')) {
+		initQuotes();
+	}
+
+	if (document.querySelector('#prices')) {
+		initShop();
+	}
 
 })(window);
