@@ -40,7 +40,7 @@
                                 <tr>
                                     <td>${shopItem.title}</td>
                                     <td>${shopItem.price}.–</td>
-                                    <td>${shopItem.avg_weight === 0 ? 'auf Anfrage' : shopItem.avg_weight + ' gr'} ${shopItem.sold_out ? ' (<i>Zurzeit ausverkauft</i>)' : ''}</td>
+                                    <td>${shopItem.avg_weight === 0 ? 'Auf Anfrage' : shopItem.avg_weight + ' gr'} ${shopItem.sold_out ? ' (<i>Zurzeit ausverkauft</i>)' : ''}</td>
                                 </tr>
                             `;
 					})
