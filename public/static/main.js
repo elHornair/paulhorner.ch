@@ -30,7 +30,7 @@
 		document.addEventListener('DOMContentLoaded', function() {
 			let db = firebase.firestore();
 
-			db.collection('shop_items').get().then((querySnapshot) => {
+			db.collection('shop_items').orderBy('title').get().then((querySnapshot) => {
 				let itemsString = querySnapshot.docs
 					.map((doc) => {
 						return doc.data();
@@ -39,8 +39,8 @@
 						return `
                                 <tr>
                                     <td>${shopItem.title}</td>
-                                    <td>${shopItem.price}.-</td>
-                                    <td>${shopItem.avg_weight} gr ${shopItem.sold_out ? ' (<i>Zurzeit ausverkauft</i>)' : ''}</td>
+                                    <td>${shopItem.price}.–</td>
+                                    <td>${shopItem.avg_weight === 0 ? 'auf Anfrage' : shopItem.avg_weight + ' gr'} ${shopItem.sold_out ? ' (<i>Zurzeit ausverkauft</i>)' : ''}</td>
                                 </tr>
                             `;
 					})
