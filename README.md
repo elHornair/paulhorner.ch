@@ -9,6 +9,13 @@
 * Make sure you're logged in: `firebase login` (use private google account)
 * Serve locally: `firebase serve`
 
+## Update data
+* Adapt the data in `private/data`
+* Remove old data in firebase console
+* Temporarily allow `write` in firebase console
+* Run the: `prefill_db.js` script
+* Disallow `write` in firebase console
+
 ## Deploy
 * Deploy: `firebase deploy`
 * Go to https://paulhorner-205cd.web.app and be happy 🎉
