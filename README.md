@@ -7,7 +7,8 @@
 ## Develop
 * Run the correct node version: `nvm use` (it will take the version from `.nvmrc`)
 * Make sure you're logged in: `firebase login` (use private google account)
-* Serve locally: `firebase serve`
+* Serve locally: `firebase serve` (if this doesn't work, it's probably due to an outdated session. Fix:
+  `firebase logout` then `firebase login`)
 
 ## Update data
 * Adapt the data in `private/data`
