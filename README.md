@@ -12,7 +12,7 @@
 ## Update data
 * Adapt the data in `private/data`
 * Remove old data in firebase console
-* Temporarily allow `write` in firebase console
+* Temporarily allow `write` in firebase console (https://console.firebase.google.com/project/paulhorner-205cd/firestore/rules)
 * Run the: `prefill_db.js` script
 * Disallow `write` in firebase console
 
